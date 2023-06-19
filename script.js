@@ -20,3 +20,14 @@ function mudarFoto() {
     indiceFotoAtual = (indiceFotoAtual + 1) % fotos.length;
     fotoElement.src = fotos[indiceFotoAtual];
 }
+
+
+const logo = document.querySelector("#mainlogo");
+
+logo.addEventListener("click", (evento)=> {
+    evento.preventDefault()
+
+
+    console.log(evento)
+    console.log(evento.target[0].value)
+})
