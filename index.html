@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,47 +9,79 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Rubik&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-<header>
+
+  <header>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
-   
-       
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#quem-somos">Quem somos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#servicos">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#cuidados">Dicas</a>
-            </li>
-          </ul>
-        
+      <img src="logo.png" alt="Imagem" class="imagem" id="mainlogo">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <img src="home.png" class="img">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servicos">HOME</a>
+          </li>
+          <li class="nav-item">
+            <img src="team.png" class="img">
+          </li>
+          <li class="nav-item">
+            <div class="logonav"></div>
+            <a class="nav-link" href="#servicos">EQUIPE</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <img src="coin.png" class="img">
+          </li>
+          <li class="nav-item">
+            <div class="logonav"></div>
+            <a class="nav-link" href="#cuidados">ORÇAMENTO</a>
+          </li>
+          </li>
+          </li>
+          <li class="nav-item">
+            <img src="telephone.png" class="img">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cuidados">CONTATO</a>
+          </li>
+          <section class="login">
+            <img src="login.png" alt="img-login">
+            <h3>
+              Minha conta
+            </h3>
+          </section>
+        </ul>
+
+
       </div>
     </nav>
   </header>
 
-  <section id="cabecalho">
- <img src="logo.png" alt="Imagem" class="imagem" id="mainlogo">
- <div class="telefone">
-  <img src="logofone.png" alt="Ícone de telefone" class="icone">
-  <span>(11) 3941-1720 </span>
-</div>
- </h1>
-  </section>
+  <div id="cabecalho">
+    <section id="caixatexto">
+      <h1>Casa do Óleo<br>Jaraguá</h1>
+      <h2>O melhor serviço de troca de óleo automotivo há mais de 20 anos.</h2>
+    </section>
+  </div>
 
 
 
 
   <section id="servicos">
-   
+
     <ul>
-      <li> <button class="botao-modal" onclick="abrirModal()">Troca de Óleo</button>
+      <li> <button class="botao-modal" onclick="abrirModal()">Troca de Óleo e Filtros</button>
       </li>
       <li><button class="botao-modal" onclick="abrirModal()">Revisão Preventiva</button></li>
       <li><button class="botao-modal" onclick="abrirModal()">Câmbio Automático</button></li>
@@ -57,75 +90,87 @@
 
   <div id="modal" class="modal">
     <div class="modal-content">
-        <button class="fechar-modal" onclick="fecharModal()" id="fechar">&times;</button>
-        
-        <div id="galeria">
-          <img id="foto" src="troca-oleo.png" alt="Imagem">
+      <button class="fechar-modal" onclick="fecharModal()" id="fechar">&times;</button>
+
+      <div id="galeria">
+        <img id="foto" src="troca-oleo.png" alt="Imagem">
       </div>
-      
+
       <button onclick="mudarFoto()" id="nextphoto">próxima</button>
-      
-        <p>Texto informativo sobre a foto.</p>
+
+      <p>Texto informativo sobre a foto.</p>
     </div>
-</div>
-  
-
-  <section id="cotacao">
-  
-    <form>
-      <div class="formulario_titulo">
-        <h2>Solicite uma cotação!</h2> <br>
-      </div>
-  <label for="nome">Nome:</label>
-  <input type="text" id="nome" required placeholder="Informe seu nome">
-  
-  <label for="telefone">Telefone:</label>
-  <input type="tel" id="telefone" required placeholder="Informe um número de telefone válido">
-  
-  <label for="email">E-mail:</label>
-  <input type="email" id="email" required placeholder="Informe um endereço de e-mail válido">
-  
-  <label for="modelo">Modelo do carro:</label>
-  <input type="text" id="modelo" required placeholder="Informe o modelo do carro">
-  
-  <label for="ano">Ano:</label>
-  <input type="number" id="ano" required placeholder="Informe o ano do carro">
-  
-  <label for="motor">Motor:</label>
-  <input type="text" id="motor" required placeholder="Informe o tipo de motor">
-
-  <button type="submit">Enviar</button>
-  
-</form>
-<div class="localizacao">
-
-   
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14640.60035857486!2d-46.76584951284181!3d-23.45505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefbf56d7df3f1%3A0x36d052f5a801369!2sCasa%20do%20%C3%93leo%20Jaragu%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1686539813132!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
   </div>
 
-<div>
 
-  <div class="social-media">
-    <div class="redes-sociais">
-        <a href="https://www.instagram.com/casadooleojaragua" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://www.facebook.com/casadooleojaragua" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+  <section id="cotacao">
+
+    <form>
+      <div class="formulario_titulo">
+        <h2>Solicite uma cotação!</h2>
+      </div>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required placeholder="Informe seu nome">
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" required placeholder="Informe um número de telefone válido">
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" required placeholder="Informe um endereço de e-mail válido">
+
+      <label for="modelo">Modelo do carro:</label>
+      <input type="text" id="modelo" required placeholder="Informe o modelo do carro">
+
+      <label for="ano">Ano:</label>
+      <input type="number" id="ano" required placeholder="Informe o ano do carro">
+
+      <label for="motor">Motor:</label>
+      <input type="text" id="motor" required placeholder="Informe o tipo de motor">
+
+      <button type="submit">Enviar</button>
+    </form>
+
+
+    <div>
+      <section class="blocoRedes">
+      <div class="social-media">
+        <div class="instagram">
+          <a href="https://www.instagram.com/casadooleojaragua" target="_blank"><img src="instagram.png" class="redelogo" >
+            </a>
+        </div>
+        <div class="facebook">
+          <a href="https://www.facebook.com/casadooleojaragua" target="_blank" >
+          <img src="facebook.png" class="redelogo" id="face"></a>
+        </div>
+
+        <div class="telefone">
+
+        </div>
+        <div class="e-mail">
+
+        </div>
+      </div>
+      </section>
     </div>
-    <div class="contato">
-        <p>Email: casadooleojaragua.loja2@gmail.com</p>
-        <p>Telefone: 11 3941-1720</p>
+
+
+    <div class="localizacao">
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14640.60035857486!2d-46.76584951284181!3d-23.45505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefbf56d7df3f1%3A0x36d052f5a801369!2sCasa%20do%20%C3%93leo%20Jaragu%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1686539813132!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
     </div>
-</div>
-</div>
 
   </section>
 
- 
+
 
   <footer>
     <p>&copy; 2023 Casa do Óleo Jaraguá. Todos os direitos reservados. Feito por: Daniel </p>
   </footer>
-  
+
   <script src="script.js"></script>
 </body>
+
 </html>
